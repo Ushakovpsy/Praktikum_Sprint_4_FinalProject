@@ -1,7 +1,7 @@
 package ru.praktikum.selenium;
 
 import org.junit.Test;
-import ru.praktikum.selenium.pageobject.MainPage;
+import ru.praktikum.selenium.page_object.MainPage;
 
 import java.util.Set;
 
@@ -11,7 +11,7 @@ public class ClickLogoRedirectToMainPageYandex extends Base {
     String expectedURL = "https://dzen.ru/?yredirect=true";
 
     @Test
-    public void ClickLogoRedirectToMainPageScooter() {
+    public void clickLogoRedirectToMainPageScooter() {
         mainPage = new MainPage(webDriver);
 
         mainPage.clickLogoMainPageYandex();

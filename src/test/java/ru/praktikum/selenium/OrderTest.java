@@ -3,9 +3,9 @@ package ru.praktikum.selenium;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import ru.praktikum.selenium.pageobject.MainPage;
-import ru.praktikum.selenium.pageobject.OrderFirstPage;
-import ru.praktikum.selenium.pageobject.OrderSecondPage;
+import ru.praktikum.selenium.page_object.MainPage;
+import ru.praktikum.selenium.page_object.OrderFirstPage;
+import ru.praktikum.selenium.page_object.OrderSecondPage;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -42,7 +42,7 @@ public class OrderTest extends Base {
     }
 
     @Test
-    public void OrderByTopButton() {
+    public void orderByTopButton() {
         mainPage = new MainPage(webDriver);
         orderFirstPage = new OrderFirstPage(webDriver);
         orderSecondPage = new OrderSecondPage(webDriver);
@@ -68,7 +68,7 @@ public class OrderTest extends Base {
         orderSecondPage.checkWindowСonfirmationNewOrder();
     }
     @Test
-    public void OrderByBottomButton() {
+    public void orderByBottomButton() {
         mainPage = new MainPage(webDriver);
         orderFirstPage = new OrderFirstPage(webDriver);
         orderSecondPage = new OrderSecondPage(webDriver);

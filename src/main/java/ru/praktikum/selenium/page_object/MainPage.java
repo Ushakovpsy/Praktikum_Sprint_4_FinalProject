@@ -1,4 +1,4 @@
-package ru.praktikum.selenium.pageobject;
+package ru.praktikum.selenium.page_object;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -23,39 +23,48 @@ public class MainPage {
     //Нижняя кнопка "Заказать".
     private By orderBottomButton = By.xpath("//div[@class='Home_FinishButton__1_cWm']//button[contains(text(), 'Заказать')]");
     //Блок с разделом "Вопросы о важном".
+
     private By blockFaq = By.className("Home_FourPart__1uthg");
     //Кнопка с вопросом "Сколько это стоит? И как оплатить?"
-    private By textQuestionCoast = By.xpath("//*[@id='accordion__heading-0']");
+    private By textQuestionCoast = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Сколько это стоит? И как оплатить?')]");
     //Текст ответа на вопрос о стоимости.
-    private By textAnswerCoast = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(1) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerCoast = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Сутки — 400 рублей. Оплата курьеру — наличными или картой.']");
+
     //Кнопка с вопросом "Хочу сразу несколько самокатов! Так можно?"
-    private By textQuestionFewScooters = By.xpath("//*[@id='accordion__heading-1']");
+    private By textQuestionFewScooters = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Хочу сразу несколько самокатов! Так можно?')]");
     //Текст ответа на вопрос о количестве самокатов.
-    private By textAnswerFewScooters = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(2) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerFewScooters = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.']");
+
     //Кнопка с вопросом "Как рассчитывается время аренды?"
-    private By textQuestionTimeRent = By.xpath("//*[@id='accordion__heading-2']");
+    private By textQuestionTimeRent = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Как рассчитывается время аренды?')]");
     //Текст ответа на вопрос о времени аренды.
-    private By textAnswerTimeRent = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(3) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerTimeRent = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.']");
+
     //Кнопка с вопросом "Можно ли заказать самокат прямо на сегодня?"
-    private By textQuestionRentToday = By.xpath("//*[@id='accordion__heading-3']");
+    private By textQuestionRentToday = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Можно ли заказать самокат прямо на сегодня?')]");
     //Текст ответа на вопрос об аренде сегодня.
-    private By textAnswerRentToday = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(4) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerRentToday = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Только начиная с завтрашнего дня. Но скоро станем расторопнее.']");
+
     //Кнопка с вопросом "Можно ли продлить заказ или вернуть самокат раньше?"
-    private By textQuestionExtendAndReturn = By.xpath("//*[@id='accordion__heading-4']");
+    private By textQuestionExtendAndReturn = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Можно ли продлить заказ или вернуть самокат раньше?')]");
     //Текст ответа на вопрос о продлении и возврате.
-    private By textAnswerExtendAndReturn = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(5) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerExtendAndReturn = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.']");
+
     //Кнопка с вопросом "Вы привозите зарядку вместе с самокатом?"
-    private By textQuestionAboutCharger = By.xpath("//*[@id='accordion__heading-5']");
+    private By textQuestionAboutCharger = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Вы привозите зарядку вместе с самокатом?')]");
     //Текст ответа на вопрос о зарядке.
-    private By textAnswerAboutCharger = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(6) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerAboutCharger = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.']");
+
     //Кнопка с вопросом "Можно ли отменить заказ?"
-    private By textQuestionDenyOrder = By.xpath("//*[@id='accordion__heading-6']");
+    private By textQuestionDenyOrder = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Можно ли отменить заказ?')]");
     //Текст ответа на вопрос об отмене заказа.
-    private By textAnswerDenyOrder = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(7) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerDenyOrder = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.']");
+
     //Кнопка с вопросом "Я живу за МКАДом, привезёте?"
-    private By textQuestionDeliveryFurtherMKAD = By.xpath("//*[@id='accordion__heading-7']");
+    private By textQuestionDeliveryFurtherMKAD = By.xpath("//div[@class='Home_FAQ__3uVm4']//div[contains(text(), 'Я жизу за МКАДом, привезёте?')]");
     //Текст ответа на вопрос о доставка за МКАД.
-    private By textAnswerDeliveryFurtherMKAD = By.cssSelector("div.App_App__15LM- div.Home_HomePage__ZXKIX div.Home_FourPart__1uthg div.Home_FAQ__3uVm4 div.accordion div.accordion__item:nth-child(8) div.accordion__panel > p:nth-child(1)");
+    private By textAnswerDeliveryFurtherMKAD = By.xpath("//div[@class='Home_FAQ__3uVm4']//p[text()='Да, обязательно. Всем самокатов! И Москве, и Московской области.']");
+
     // Логотип "Самоката" на главной странице.
     private By logoMainPageScooter = By.cssSelector(".Header_LogoScooter__3lsAR");
     // Логотип "Яндекса" на главной странице.
@@ -148,18 +157,31 @@ public class MainPage {
         String actualText = webDriver.findElement(textAnswerDeliveryFurtherMKAD).getText();
         Assert.assertEquals(expectedText, actualText);
     }
+
     public void clickLogoMainPageScooter() {
         webDriver.findElement(logoMainPageScooter).click();
     }
+
     public void checkUrlRedirectMainPageScooter(String expectedURL) {
         String actualURL = webDriver.getCurrentUrl();
         Assert.assertEquals(expectedURL, actualURL);
     }
+
     public void clickLogoMainPageYandex() {
         webDriver.findElement(logoMainPageYandex).click();
     }
+
     public void checkUrlRedirectMainPageYandex(String expectedURL) {
         String actualURL = webDriver.getCurrentUrl();
         Assert.assertEquals(expectedURL, actualURL);
     }
-}
+
+    public void checkAllLocators(int index, String expectedResult) {
+        By[] buttons = {textQuestionCoast, textQuestionFewScooters, textQuestionTimeRent, textQuestionRentToday, textQuestionExtendAndReturn, textQuestionAboutCharger, textQuestionDenyOrder, textQuestionDeliveryFurtherMKAD};
+        By[] locators = {textAnswerCoast, textAnswerFewScooters, textAnswerTimeRent, textAnswerRentToday, textAnswerExtendAndReturn, textAnswerAboutCharger, textAnswerDenyOrder, textAnswerDeliveryFurtherMKAD};
+
+        webDriver.findElement(buttons[index]).click();
+        String actualText = webDriver.findElement(locators[index]).getText();
+        Assert.assertEquals(expectedResult, actualText);
+        }
+    }

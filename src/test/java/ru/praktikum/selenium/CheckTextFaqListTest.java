@@ -1,11 +1,11 @@
 package ru.praktikum.selenium;
 
 import org.junit.Test;
-import ru.praktikum.selenium.pageobject.MainPage;
+import ru.praktikum.selenium.page_object.MainPage;
 
 public class CheckTextFaqListTest extends Base {
 
-        MainPage mainPage;
+    MainPage mainPage;
 
     String textAnswerCoast = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";
     String textAnswerFewScooters = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.";
@@ -17,7 +17,7 @@ public class CheckTextFaqListTest extends Base {
     String textAnswerDeliveryFurtherMKAD = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
 
     @Test
-    public void CheckTextCoast() {
+    public void checkTextCoast() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
@@ -25,7 +25,7 @@ public class CheckTextFaqListTest extends Base {
         mainPage.checkTextAnswerCoast(textAnswerCoast);
     }
     @Test
-    public void CheckTextFewScooters() {
+    public void checkTextFewScooters() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
@@ -33,7 +33,7 @@ public class CheckTextFaqListTest extends Base {
         mainPage.checkTextAnswerFewScooters(textAnswerFewScooters);
     }
     @Test
-    public void CheckTextAnswerTimeRent() {
+    public void checkTextAnswerTimeRent() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
@@ -41,7 +41,7 @@ public class CheckTextFaqListTest extends Base {
         mainPage.checkTextAnswerTimeRent(textAnswerTimeRent);
     }
     @Test
-    public void CheckTextAnswerRentToday() {
+    public void checkTextAnswerRentToday() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
@@ -49,7 +49,7 @@ public class CheckTextFaqListTest extends Base {
         mainPage.checkTextAnswerRentToday(textAnswerRentToday);
     }
     @Test
-    public void CheckTextAnswerExtendAndReturn() {
+    public void checkTextAnswerExtendAndReturn() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
@@ -57,7 +57,7 @@ public class CheckTextFaqListTest extends Base {
         mainPage.checkTextAnswerExtendAndReturn(textAnswerExtendAndReturn);
     }
     @Test
-    public void CheckTextAnswerAboutCharger() {
+    public void checkTextAnswerAboutCharger() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
@@ -65,7 +65,7 @@ public class CheckTextFaqListTest extends Base {
         mainPage.checkTextAnswerAboutCharger(textAnswerAboutCharger);
     }
     @Test
-    public void CheckTextAnswerDenyOrder() {
+    public void checkTextAnswerDenyOrder() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
@@ -73,7 +73,7 @@ public class CheckTextFaqListTest extends Base {
         mainPage.checkTextAnswerDenyOrder(textAnswerDenyOrder);
     }
     @Test
-    public void CheckTextAnswerDeliveryFurtherMKAD() {
+    public void checkTextAnswerDeliveryFurtherMKAD() {
         mainPage = new MainPage(webDriver);
 
         mainPage.scrollBlockFaq();
